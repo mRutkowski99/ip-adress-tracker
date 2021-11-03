@@ -1,0 +1,46 @@
+//VARIABLES
+$clr-very-dark-grey: hsl(0, 0%, 17%);
+$clr-dark-grey: hsl(0, 0%, 59%);
+$clr-white: #fff;
+$clr-black: #000;
+
+//BREAKPOINTS
+$bp-medium: 900px;
+
+//RESET
+html {
+  font-size: 67.5%; //1rem = 10px
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//BASIC TYPOGRAPHY
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+//https://github.com/sass/sass/issues/2849#issuecomment-621991522
+@function css-function($function, $values...) {
+  @return $function + unquote("(") + $values + unquote(")");
+}
+
+@function css-min($values...) {
+  @return css-function(min, $values);
+}
+
+@function css-max($values...) {
+  @return css-function(max, $values);
+}
+
+@function css-clamp($values...) {
+  @return css-function(clamp, $values);
+}

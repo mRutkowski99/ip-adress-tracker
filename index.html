@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <script defer src="script.js"></script>
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; background-color: transparent;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+</head>
+<body class="content">
+  <div class="msg">
+    Enter valid IP number
+  </div>
+
+  <div class="banner">
+    <h1 class="header-1">IP Address Tracker</h1>
+
+    <form class="form">
+      <input type="text" class="form__input" name="ip" id="input" placeholder="Search for any IP address">
+      <button class="btn" id="btn">
+        <svg class="btn__icon">
+          <use href="images/icons.svg#icon-arrow"></use>
+        </svg>
+      </button>
+    </form>
+
+    <div class="data">
+      <div class="data__box">
+        <h2 class="header-2">IP Address</h2>
+        <p class="paragraph" id="ip"></p>
+      </div>
+
+      <div class="data__box">
+        <h2 class="header-2">Location</h2>
+        <p class="paragraph" id="location"></p>
+        <p class="paragraph" id="postal"></p>
+      </div>
+
+      <div class="data__box">
+        <h2 class="header-2">Timezone</h2>
+        <p class="paragraph" id="timezone"></p>
+      </div>
+
+      <div class="data__box">
+        <h2 class="header-2">ISP</h2>
+        <p class="paragraph" id="isp"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="map" id="map">
+
+  </div>
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Miłosz Rutkowski</a>.
+  </div>
+</body>
+</html>

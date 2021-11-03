@@ -1,0 +1,45 @@
+.data {
+  width: 90%;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background-color: $clr-white;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1rem 3rem $clr-dark-grey;
+
+  @media screen and (min-width: $bp-medium) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  &__box {
+    padding: 1rem 3%;
+    text-align: center;
+    position: relative;
+
+    @media screen and (min-width: $bp-medium) {
+      text-align: left;
+      &:not(:first-of-type) {
+        border-left: solid 1px $clr-dark-grey;
+      }
+    }
+
+    // &:not(:last-of-type)::after {
+    //   content: "";
+    //   position: absolute;
+    //   right: 0;
+    //   top: 10%;
+    //   bottom: 10%;
+    //   width: 2px;
+    //   transform: translateX(50%);
+    //   background-color: $clr-dark-grey;
+    // }
+  }
+}

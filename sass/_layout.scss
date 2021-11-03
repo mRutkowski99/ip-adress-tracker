@@ -1,0 +1,51 @@
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner {
+  flex: 0 0 20%;
+  padding: css-min(#{3rem}, #{5%}) 5% calc(5% + 12rem) 5%;
+  background-image: url(../images/pattern-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (min-width: $bp-medium) {
+    padding: css-min(#{3rem}, #{5%}) 5% calc(5% + 2rem) 5%;
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.map {
+  flex: 1;
+  min-height: 40rem;
+  background-color: #ddd;
+  position: relative;
+  z-index: 0;
+}
+
+.msg {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  padding: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: red;
+  background-color: rgba($clr-white, 0.9);
+  border-radius: 0 0 1rem 1rem;
+  transition: transform 0.3s ease-out;
+
+  &--shown {
+    transform: translate(-50%, 0);
+  }
+}

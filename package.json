@@ -1,0 +1,18 @@
+{
+  "name": "ip-address-tracker-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "update-sprite": "svg-sprite -s --symbol-dest images --symbol-sprite icons.svg images/icon-location*svg images/icon-arrow*svg",
+    "compile-sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "leaflet": "^1.7.1",
+    "node-sass": "^6.0.1",
+    "svg-sprite": "^1.5.3"
+  },
+  "dependencies": {}
+}
